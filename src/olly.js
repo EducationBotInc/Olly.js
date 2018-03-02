@@ -80,7 +80,8 @@
     if (typeof module !== 'undefined' && module.exports) {
         // We use a fake DOM here so we can still parse/render correctly
         // var jsdom = require("jsdom");
-        // module.exports = new Olly();
+        module.exports = new Olly();
+        module.exports.ready();
         // jsdom.env("<html><body></body></html>", function (errors, window) {
         //     module.document = window.document;
         //     module.exports.ready();
