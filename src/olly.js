@@ -215,7 +215,7 @@
                     JSONPURL = 'http://www.reddit.com/user/' + URL.pathchunks[1] + '/submitted.embed';
                 }
 
-                deferred = olly.defer();
+                deferred = self.defer();
                 window[callbackName] = function (markup) {
                     deferred.resolve({markup: markup});
                 };
@@ -388,7 +388,7 @@
             };
 
             local.finish = function () {
-                local.callback.apply(olly, local.args);
+                local.callback.apply(self, local.args);
             };
 
             return local;
@@ -400,7 +400,7 @@
             domainName = this.findDomain(URL);
             extensionName = this.findExtension(URL);
 
-            if ((!domainName && !extensionName) || (services || {})[domainName] == olly.TEXT) {
+            if ((!domainName && !extensionName) || (services || {})[domainName] == self.TEXT) {
                 return "";
             }
 
@@ -410,7 +410,7 @@
             if (templateObj && templateObj.scripts) {
                 for (scriptIndex = 0; scriptIndex < templateObj.scripts.length; scriptIndex += 1) {
                     src = templateObj.scripts[scriptIndex];
-                    this.loadScript(element, olly.generate(src, definition.data));
+                    this.loadScript(element, self.generate(src, definition.data));
                 }
             }
 
@@ -452,7 +452,7 @@
         };
 
         self.load = function (src) {
-            var deferred = olly.defer();
+            var deferred = self.defer();
 
             function reqListener (res) {
                 deferred.resolve(res.responseText);
@@ -478,7 +478,7 @@
             if (typeof templateObj === "string") {
                 templateObj = {markup: templateObj};
             }
-            element.innerHTML = olly.generate(templateObj.markup, data);
+            element.innerHTML = self.generate(templateObj.markup, data);
         };
 
         self.generate = function (template, data) {
