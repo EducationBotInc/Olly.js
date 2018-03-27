@@ -1,6 +1,6 @@
 {
   "name": "Olly",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A JavaScript library to convert URLs into embedable HTML.",
   "main": "src/olly.js",
   "scripts": {
