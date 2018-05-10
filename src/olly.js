@@ -80,7 +80,7 @@
             youtube: function (URL) {
                 var structure = {
                     data: {
-                        embedURL: 'http://www.youtube.com/embed/' + URL.query.v
+                        embedURL: 'https://www.youtube.com/embed/' + URL.query.v
                     }
                 };
                 return structure;
@@ -91,7 +91,7 @@
                 var structure = {
                     template: 'youtube',
                     data: {
-                        embedURL: 'http://www.youtube.com/embed/' + URL.pathname.slice(1, URL.pathname.length)
+                        embedURL: 'https://www.youtube.com/embed/' + URL.pathname.slice(1, URL.pathname.length)
                     }
                 };
                 return structure;
@@ -121,7 +121,7 @@
             dailymotion: function (URL) {
                 var structure = {
                     data: {
-                       embedURL: 'http://www.dailymotion.com/embed/video/' + URL.pathchunks[1]
+                       embedURL: 'https://www.dailymotion.com/embed/video/' + URL.pathchunks[1]
                     }
                 };
                 return structure;
@@ -131,7 +131,7 @@
             liveleak: function (URL) {
                 var structure = {
                     data: {
-                       embedURL: 'http://www.liveleak.com/e/' + URL.query.i
+                       embedURL: 'https://www.liveleak.com/e/' + URL.query.i
                     }
                 };
                 return structure;
@@ -151,7 +151,7 @@
             ted: function (URL) {
                 var structure = {
                     data: {
-                       embedURL: 'http://embed.ted.com/talks/' + URL.pathchunks[1] + '.html'
+                       embedURL: 'https://embed.ted.com/talks/' + URL.pathchunks[1] + '.html'
                     }
                 };
                 return structure;
@@ -161,7 +161,7 @@
             imgur: function (URL) {
                 var structure = {
                     data: {
-                        embedURL: 'http://i.imgur.com/' + URL.pathchunks[0] + '.gif'
+                        embedURL: 'https://i.imgur.com/' + URL.pathchunks[0] + '.gif'
                     }
                 };
                 return structure;
@@ -171,7 +171,7 @@
             jsfiddle: function (URL) {
                 var structure = {
                     data: {
-                        embedURL: 'http://jsfiddle.net/' + URL.pathchunks.join('/') + '/embedded/'
+                        embedURL: 'https://jsfiddle.net/' + URL.pathchunks.join('/') + '/embedded/'
                     }
                 };
                 return structure;
@@ -208,11 +208,11 @@
                 template = URL.pathchunks.indexOf("user") != -1 ? "reddit_user" : "reddit_subreddit";
 
                 if (template == "reddit_subreddit") {
-                    JSONPURL = 'http://www.reddit.com/r/' + URL.pathchunks[1] + '/hot/.embed';
+                    JSONPURL = 'https://www.reddit.com/r/' + URL.pathchunks[1] + '/hot/.embed';
                 }
 
                 if (template == "reddit_user") {
-                    JSONPURL = 'http://www.reddit.com/user/' + URL.pathchunks[1] + '/submitted.embed';
+                    JSONPURL = 'https://www.reddit.com/user/' + URL.pathchunks[1] + '/submitted.embed';
                 }
 
                 deferred = self.defer();
@@ -354,7 +354,7 @@
             }
 
             return {
-                url: URLString,               // => "http://example.com:3000/pathname/?search=test#hash"
+                url: URLString,               // => "https://example.com:3000/pathname/?search=test#hash"
                 protocol: parser.protocol,    // => "http:"
                 hostname: parser.hostname,    // => "example.com"
                 port: parser.port,            // => "3000"
@@ -522,7 +522,7 @@
             github: {
                 markup: '<div class="github-widget" data-repo="{{repo}}"></div>',
                 scripts: [
-                    'http://abeisgreat.github.io/Github-Repo-Widget/githubRepoWidget.min.js'
+                    'https://abeisgreat.github.io/Github-Repo-Widget/githubRepoWidget.min.js'
                 ]
             },
 
@@ -536,12 +536,12 @@
 
             spotify: '<iframe src="https://embed.spotify.com/?uri=spotify:track:{{embedID}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>',
 
-            twitch: '<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={{channel}}" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel={{channel}}&auto_play=true&start_volume=25" /></object>',
+            twitch: '<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="https://www.twitch.tv/widgets/live_embed_player.swf?channel={{channel}}" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="https://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel={{channel}}&auto_play=true&start_volume=25" /></object>',
 
             gfycat: {
                 markup: '<img class="gfyitem" data-id="{{embedID}}" />',
                 scripts: [
-                    'http://assets.gfycat.com/js/gfyajax-0.517d.js'
+                    'https://assets.gfycat.com/js/gfyajax-0.517d.js'
                 ]
             },
 

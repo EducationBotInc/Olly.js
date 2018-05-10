@@ -7,7 +7,7 @@
         youtube: function (URL) {
             var structure = {
                 data: {
-                    embedURL: 'http://www.youtube.com/embed/' + URL.query.v
+                    embedURL: 'https://www.youtube.com/embed/' + URL.query.v
                 }
             };
             return structure;
@@ -18,7 +18,7 @@
             var structure = {
                 template: 'youtube',
                 data: {
-                    embedURL: 'http://www.youtube.com/embed/' + URL.pathname.slice(1, URL.pathname.length)
+                    embedURL: 'https://www.youtube.com/embed/' + URL.pathname.slice(1, URL.pathname.length)
                 }
             };
             return structure;
@@ -48,7 +48,7 @@
         dailymotion: function (URL) {
             var structure = {
                 data: {
-                   embedURL: 'http://www.dailymotion.com/embed/video/' + URL.pathchunks[1]
+                   embedURL: 'https://www.dailymotion.com/embed/video/' + URL.pathchunks[1]
                 }
             };
             return structure;
@@ -58,7 +58,7 @@
         liveleak: function (URL) {
             var structure = {
                 data: {
-                   embedURL: 'http://www.liveleak.com/e/' + URL.query.i
+                   embedURL: 'https://www.liveleak.com/e/' + URL.query.i
                 }
             };
             return structure;
@@ -78,7 +78,7 @@
         ted: function (URL) {
             var structure = {
                 data: {
-                   embedURL: 'http://embed.ted.com/talks/' + URL.pathchunks[1] + '.html'
+                   embedURL: 'https://embed.ted.com/talks/' + URL.pathchunks[1] + '.html'
                 }
             };
             return structure;
@@ -88,7 +88,7 @@
         imgur: function (URL) {
             var structure = {
                 data: {
-                    embedURL: 'http://i.imgur.com/' + URL.pathchunks[0] + '.gif'
+                    embedURL: 'https://i.imgur.com/' + URL.pathchunks[0] + '.gif'
                 }
             };
             return structure;
@@ -98,7 +98,7 @@
         jsfiddle: function (URL) {
             var structure = {
                 data: {
-                    embedURL: 'http://jsfiddle.net/' + URL.pathchunks.join('/') + '/embedded/'
+                    embedURL: 'https://jsfiddle.net/' + URL.pathchunks.join('/') + '/embedded/'
                 }
             };
             return structure;
@@ -135,11 +135,11 @@
             template = URL.pathchunks.indexOf("user") != -1 ? "reddit_user" : "reddit_subreddit";
 
             if (template == "reddit_subreddit") {
-                JSONPURL = 'http://www.reddit.com/r/' + URL.pathchunks[1] + '/hot/.embed';
+                JSONPURL = 'https://www.reddit.com/r/' + URL.pathchunks[1] + '/hot/.embed';
             }
 
             if (template == "reddit_user") {
-                JSONPURL = 'http://www.reddit.com/user/' + URL.pathchunks[1] + '/submitted.embed';
+                JSONPURL = 'https://www.reddit.com/user/' + URL.pathchunks[1] + '/submitted.embed';
             }
 
             deferred = olly.defer();

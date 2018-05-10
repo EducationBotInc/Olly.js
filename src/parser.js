@@ -44,7 +44,7 @@
         }
 
         return {
-            url: URLString,               // => "http://example.com:3000/pathname/?search=test#hash"
+            url: URLString,               // => "https://example.com:3000/pathname/?search=test#hash"
             protocol: parser.protocol,    // => "http:"
             hostname: parser.hostname,    // => "example.com"
             port: parser.port,            // => "3000"

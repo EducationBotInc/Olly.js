@@ -34,7 +34,7 @@
         github: {
             markup: '<div class="github-widget" data-repo="{{repo}}"></div>',
             scripts: [
-                'http://abeisgreat.github.io/Github-Repo-Widget/githubRepoWidget.min.js'
+                'https://abeisgreat.github.io/Github-Repo-Widget/githubRepoWidget.min.js'
             ]
         },
 
@@ -48,12 +48,12 @@
 
         spotify: '<iframe src="https://embed.spotify.com/?uri=spotify:track:{{embedID}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>',
 
-        twitch: '<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={{channel}}" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel={{channel}}&auto_play=true&start_volume=25" /></object>',
+        twitch: '<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="https://www.twitch.tv/widgets/live_embed_player.swf?channel={{channel}}" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="https://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel={{channel}}&auto_play=true&start_volume=25" /></object>',
 
         gfycat: {
             markup: '<img class="gfyitem" data-id="{{embedID}}" />',
             scripts: [
-                'http://assets.gfycat.com/js/gfyajax-0.517d.js'
+                'https://assets.gfycat.com/js/gfyajax-0.517d.js'
             ]
         },
 
